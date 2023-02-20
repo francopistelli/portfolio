@@ -1,0 +1,43 @@
+---
+import ProjectCard from "../ProjectCard.astro";
+import web1 from "/web1.png";
+import web2 from "/web2.png";
+import web3 from "/web3.png";
+import web4 from "/web4.png";
+import web5 from "/web5.png";
+import web6 from "/web6.png";
+
+const PROJECTS = [
+    { title: "", image: web1 },
+    { title: "", image: web2 },
+    { title: "", image: web3 },
+    { title: "", image: web4 },
+    { title: "", image: web5 },
+    { title: "", image: web6 },
+];
+---
+
+<section class="mt-20" id="projects">
+    <div class="flex flex-col items-center">
+        <h3
+            class="mb-20 text-4xl text-slate-700 font-semibold py-1 underline decoration-4 decoration-teal-600 underline-offset-8"
+        >
+            Proyectos
+        </h3>
+        <p class="text-md py-2 leading-8 text-gray-800">
+            Since the beginning of my journey as a freelance designer and
+            developer, I've done remote work for
+            <span class="text-teal-500"> agencies</span>
+            consulted for <span class="text-teal-500">startups</span>
+            and collaborated with talanted people to create digital products for
+            both business and consumer use.
+        </p>
+        <p class="text-md py-2 leading-8 text-gray-800">
+            I offer from a wide range of services, including brand design,
+            programming and teaching.
+        </p>
+    </div>
+    <div class="flex flex-col gap-10 py-10 md:flex-row md:flex-wrap">
+        {PROJECTS.map(({ image }) => <ProjectCard image={image} />)}
+    </div>
+</section>

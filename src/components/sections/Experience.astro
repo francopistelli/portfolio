@@ -1,0 +1,31 @@
+---
+import TechnologyPill from "../TechnologyPill.astro";
+const TECHNOLOGIES = [
+    { id: 1, title: "React", iconName: "logos:react" },
+    { id: 2, title: "HTML 5", iconName: "vscode-icons:file-type-html" },
+    { id: 3, title: "CSS 3", iconName: "vscode-icons:file-type-css" },
+    { id: 4, title: "Javascript", iconName: "logos:javascript" },
+    { id: 5, title: "Git", iconName: "logos:git-icon" },
+    { id: 6, title: "Node js", iconName: "vscode-icons:file-type-node" },
+    { id: 7, title: "MySQL", iconName: "vscode-icons:file-type-mysql" },
+    { id: 8, title: "Taildwind CSS", iconName: "logos:tailwindcss-icon" },
+    { id: 9, title: "MongoDB", iconName: "vscode-icons:file-type-mongo" },
+    { id: 10, title: "Astro", iconName: "vscode-icons:file-type-astro" },
+    { id: 11, title: "Vite", iconName: "vscode-icons:file-type-vite" },
+    { id: 12, title: "Firebase", iconName: "vscode-icons:file-type-firebase" },
+    { id: 13, title: "Material UI", iconName: "logos:material-ui" },
+];
+---
+
+<section class="mt-20" id="experience">
+    <div class="flex flex-col items-center gap-y-20">
+        <h3 class="text-4xl text-slate-700 font-semibold py-1 underline decoration-4 decoration-teal-600 underline-offset-8">Habilidades</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {
+                TECHNOLOGIES.map(({ title, iconName }) => (
+                    <TechnologyPill title={title} iconName={iconName} />
+                ))
+            }
+        </div>
+    </div>
+</section>

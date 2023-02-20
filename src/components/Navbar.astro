@@ -1,0 +1,29 @@
+---
+import { Icon } from "astro-icon";
+const LINKS = [
+    { id: 1, title: "home", href: "#" },
+    { id: 2, title: "about", href: "#about" },
+    { id: 3, title: "experience", href: "#experience" },
+    { id: 4, title: "projects", href: "#projects" },
+];
+---
+
+<header
+    class="py-10 px-6 flex justify-between items-center w-full h-20 fixed bg-teal-600 z-20 top-0"
+>
+    <h1 class="text-xl font-burtons items-center text-white">
+        Franco Pistelli
+    </h1>
+    <ul class="hidden lg:flex items-center">
+        {
+            LINKS.map(({ id, title, href }) => (
+                <li class="px-4 cursor-pointer capitalize font-medium text-white hover:scale-110 transition-all">
+                    <a href={href}>{title}</a>
+                </li>
+            ))
+        }
+    </ul>
+    <div class="z-10 lg:hidden">
+        <Icon class="cursor-pointer w-8 text-white" name="mdi:menu" />
+    </div>
+</header>

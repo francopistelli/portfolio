@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon";
+import deved from "/dev-ed-wave.png";
+---
+
+<section class="min-h-screen pt-20 lg:pt-64">
+    <div class="flex flex-col lg:flex-row">
+        <div>
+            <div class="text-center p-10">
+                <h2
+                    class="text-5xl py2 font-medium md:text-6xl max-w-md min-w-[350px] mx-auto"
+                >
+                    Hola, soy<span class="text-teal-600">
+                        Franco Pistelli
+                    </span>!
+                </h2>
+                <h3 class="text-2xl py-2 md:text-3xl">
+                    Desarrollador Fullstack
+                </h3>
+                <p
+                    class="text-md py-5 leading-8 max-w-lg mx-auto text-gray-800 md:text-xl"
+                >
+                    Freelancer providing services for programming and
+                    design content needs. Join me down below and let's
+                    get cracking!
+                </p>
+            </div>
+            <div
+                class="text-5xl flex justify-center gap-16 py-3 text-gray-600"
+            >
+                <a
+                    href="https://www.linkedin.com/in/franco-pistelli-925601200/"
+                    target="_blank"
+                >
+                    <Icon
+                        class="cursor-pointer w-10 hover:scale-125 hover:text-blue-800 transition-all"
+                        name="mdi:linkedin"
+                    />
+                </a>
+                <a
+                    href="https://github.com/francopistelli"
+                    target="_blank"
+                >
+                    <Icon
+                        class="cursor-pointer w-10 hover:scale-125 hover:text-black transition-all"
+                        name="mdi:github"
+                    />
+                </a>
+                <a
+                    href="https://twitter.com/VestaidenGames"
+                    target="_blank"
+                >
+                    <Icon
+                        class="cursor-pointer w-10 hover:scale-125 hover:text-blue-400 transition-all"
+                        name="mdi:twitter"
+                    />
+                </a>
+            </div>
+        </div>
+        <div
+            class="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden lg:w-96 lg:h-96"
+        >
+            <img class="object-contain max-w-[150%]" src={deved} />
+        </div>
+    </div>
+</section>
